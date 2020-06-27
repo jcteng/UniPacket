@@ -6,4 +6,41 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid MinWidth="1024" MinHeight="768">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Background="#000000"/>
+        <Border Grid.Row="0" Grid.Column ="0" Background="#F2000000"/>
+        <Border Grid.Column ="1" Background="#E5000000"/>
+        <Border  Grid.Row="1" Grid.ColumnSpan="2" Background="#E5000000"/>
+        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="15,0,0,0"  >
+            <TextBlock Foreground="Orange" FontSize="36" Text="UniPacket" HorizontalAlignment="Center"/>
+            <TextBlock Foreground="Gray" FontSize="16" Text="Connect Status:" />
+            <ToggleButton Content="Connect" RequestedTheme="Dark" HorizontalAlignment="Right"/>
+            <TextBlock Foreground="Gray" FontSize="16" Text="Remote Server Address: " />
+            <TextBlock Foreground="White" FontSize="20" Text="tcp://123.12.1.21" HorizontalAlignment="Right"/>
+            <TextBlock Foreground="White" FontSize="16" Text="Duration: Flash 1s" />
+            <TextBlock Foreground="White" FontSize="16" Text="DataIn : 1.23M" />
+            <TextBlock Foreground="White" FontSize="16" Text="DataOut: 4.31M" />
+            <TextBlock Foreground="White" FontSize="16" Text="TTL : 123 ms" />
+            <TextBlock Foreground="White" FontSize="16" Text="LossRate (3s): 12.4%" />
+            <TextBlock Foreground="White" FontSize="16" Text="FEC LossRate (3s): 0.4%" />
+            <TextBlock Foreground="White" FontSize="16" Text="FEC datashard: 10" />
+            <TextBlock Foreground="White" FontSize="16" Text="FEC parityshard: 5" />
+            <TextBlock Foreground="White" FontSize="16" Text="FEC shard shift: 20" />
+            <TextBlock Foreground="White" FontSize="16" Text="crpyto method:AES" />
+            <TextBlock Foreground="Gray" FontSize="16" Text="Duplication on Pipe //./unipacket/xxx" HorizontalAlignment="Left" RequestedTheme="Dark" MinWidth="600"/>
+            <ToggleButton Content="Enable" RequestedTheme="Dark" HorizontalAlignment="Right"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="5,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <ListView/>
+        </StackPanel>
+
+    </Grid>
+</Page>
